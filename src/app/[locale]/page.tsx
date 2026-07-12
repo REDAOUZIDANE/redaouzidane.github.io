@@ -5,6 +5,8 @@ import { getDictionary } from "@/lib/i18n/getDictionary";
 import { Eyebrow } from "@/components/Eyebrow";
 import { Ticker } from "@/components/Ticker";
 import { ServiceCategoryCard } from "@/components/ServiceCategoryCard";
+import { Reveal } from "@/components/Reveal";
+import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { notFound } from "next/navigation";
 
 export default async function HomePage({
@@ -21,10 +23,10 @@ export default async function HomePage({
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-grid">
-        <div className="pointer-events-none absolute -top-32 right-[-10%] h-96 w-96 rounded-full bg-green-100 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-32 left-[-10%] h-96 w-96 rounded-full bg-navy-900/5 blur-3xl" />
+        <div className="blob-float pointer-events-none absolute -top-32 right-[-10%] h-96 w-96 rounded-full bg-green-100 blur-3xl" />
+        <div className="blob-float-delay pointer-events-none absolute -bottom-32 left-[-10%] h-96 w-96 rounded-full bg-navy-900/5 blur-3xl" />
         <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-8 lg:pb-28 lg:pt-24">
-          <div className="mx-auto max-w-3xl text-center">
+          <Reveal className="mx-auto max-w-3xl text-center">
             <Eyebrow>{dict.hero.eyebrow}</Eyebrow>
             <h1 className="text-4xl font-extrabold tracking-tight text-navy-950 sm:text-5xl lg:text-6xl">
               {dict.hero.title}
@@ -49,16 +51,18 @@ export default async function HomePage({
                 {dict.hero.ctaSecondary}
               </Link>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-6 sm:grid-cols-3">
+          <Reveal delay={150} className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-6 sm:grid-cols-3">
             {dict.hero.stats.map((stat) => (
               <div key={stat.label} className="rounded-2xl border border-slate-200 bg-white/70 px-6 py-6 text-center backdrop-blur">
-                <p className="font-display text-3xl font-extrabold text-navy-950">{stat.value}</p>
+                <p className="font-display text-3xl font-extrabold text-navy-950">
+                  <AnimatedCounter value={stat.value} />
+                </p>
                 <p className="mt-1 text-sm text-slate-500">{stat.label}</p>
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
 
         <Ticker items={dict.hero.ticker} />
@@ -66,17 +70,19 @@ export default async function HomePage({
 
       {/* Services overview */}
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
-        <div className="mx-auto max-w-2xl text-center">
+        <Reveal className="mx-auto max-w-2xl text-center">
           <Eyebrow>{dict.servicesOverview.eyebrow}</Eyebrow>
           <h2 className="text-3xl font-extrabold tracking-tight text-navy-950 sm:text-4xl">
             {dict.servicesOverview.title}
           </h2>
           <p className="mt-4 text-lg text-slate-600">{dict.servicesOverview.subtitle}</p>
-        </div>
+        </Reveal>
 
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {dict.serviceCategories.map((category) => (
-            <ServiceCategoryCard key={category.id} category={category} compact />
+          {dict.serviceCategories.map((category, i) => (
+            <Reveal key={category.id} delay={i * 80}>
+              <ServiceCategoryCard category={category} compact />
+            </Reveal>
           ))}
         </div>
 
@@ -94,7 +100,7 @@ export default async function HomePage({
       {/* Why us */}
       <section className="bg-navy-950 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
+          <Reveal className="mx-auto max-w-2xl text-center">
             <p className="text-xs font-semibold uppercase tracking-wider text-green-400">
               {dict.whyUs.eyebrow}
             </p>
@@ -102,15 +108,17 @@ export default async function HomePage({
               {dict.whyUs.title}
             </h2>
             <p className="mt-4 text-lg text-slate-300">{dict.whyUs.subtitle}</p>
-          </div>
+          </Reveal>
 
           <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {dict.whyUs.points.map((point) => (
-              <div key={point.title} className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                <CheckCircle2 className="h-6 w-6 text-green-400" />
-                <h3 className="mt-4 font-display text-base font-bold text-white">{point.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-400">{point.description}</p>
-              </div>
+            {dict.whyUs.points.map((point, i) => (
+              <Reveal key={point.title} delay={i * 80}>
+                <div className="card-lift h-full rounded-2xl border border-white/10 bg-white/5 p-6 hover:border-green-400/40 hover:bg-white/[0.07]">
+                  <CheckCircle2 className="h-6 w-6 text-green-400" />
+                  <h3 className="mt-4 font-display text-base font-bold text-white">{point.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-400">{point.description}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -118,28 +126,28 @@ export default async function HomePage({
 
       {/* Approach */}
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
-        <div className="mx-auto max-w-2xl text-center">
+        <Reveal className="mx-auto max-w-2xl text-center">
           <Eyebrow>{dict.approach.eyebrow}</Eyebrow>
           <h2 className="text-3xl font-extrabold tracking-tight text-navy-950 sm:text-4xl">
             {dict.approach.title}
           </h2>
           <p className="mt-4 text-lg text-slate-600">{dict.approach.subtitle}</p>
-        </div>
+        </Reveal>
 
         <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
-          {dict.approach.steps.map((step) => (
-            <div key={step.number} className="relative">
+          {dict.approach.steps.map((step, i) => (
+            <Reveal key={step.number} delay={i * 90} className="relative">
               <span className="font-display text-4xl font-extrabold text-slate-200">{step.number}</span>
               <h3 className="mt-3 font-display text-lg font-bold text-navy-950">{step.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">{step.description}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>
 
       {/* CTA */}
       <section className="mx-auto max-w-7xl px-6 pb-20 lg:px-8 lg:pb-28">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-navy-950 via-navy-900 to-green-700 px-8 py-16 text-center sm:px-16">
+        <Reveal className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-navy-950 via-navy-900 to-green-700 px-8 py-16 text-center sm:px-16">
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             {dict.cta.title}
           </h2>
@@ -159,7 +167,7 @@ export default async function HomePage({
               {dict.cta.buttonSecondary}
             </Link>
           </div>
-        </div>
+        </Reveal>
       </section>
     </>
   );

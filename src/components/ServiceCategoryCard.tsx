@@ -15,9 +15,9 @@ export function ServiceCategoryCard({
   return (
     <div
       id={category.id}
-      className="group flex h-full scroll-mt-28 flex-col rounded-2xl border border-slate-200 bg-white p-7 transition-shadow hover:shadow-lg hover:shadow-slate-200/60"
+      className="card-lift group flex h-full scroll-mt-28 flex-col rounded-2xl border border-slate-200 bg-white p-7 hover:shadow-xl hover:shadow-slate-200/60"
     >
-      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-navy-950 text-white transition-colors group-hover:bg-green-600">
+      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-navy-950 text-white transition-colors duration-300 group-hover:bg-green-600 group-hover:scale-110">
         <CategoryIcon icon={category.icon} className="h-6 w-6" />
       </div>
       <h3 className="mt-5 font-display text-lg font-bold text-navy-950">{category.title}</h3>

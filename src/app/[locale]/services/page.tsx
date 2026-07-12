@@ -4,6 +4,7 @@ import { isLocale, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/getDictionary";
 import { Eyebrow } from "@/components/Eyebrow";
 import { ServiceCategoryCard } from "@/components/ServiceCategoryCard";
+import { Reveal } from "@/components/Reveal";
 import { notFound } from "next/navigation";
 
 export default async function ServicesPage({
@@ -19,7 +20,7 @@ export default async function ServicesPage({
   return (
     <>
       <section className="bg-grid border-b border-slate-100">
-        <div className="mx-auto max-w-7xl px-6 py-16 text-center lg:px-8 lg:py-24">
+        <Reveal className="mx-auto max-w-7xl px-6 py-16 text-center lg:px-8 lg:py-24">
           <Eyebrow>{dict.nav.services}</Eyebrow>
           <h1 className="mx-auto max-w-3xl text-4xl font-extrabold tracking-tight text-navy-950 sm:text-5xl">
             {dict.servicesOverview.title}
@@ -30,19 +31,21 @@ export default async function ServicesPage({
           <p className="mx-auto mt-6 max-w-3xl text-sm font-medium text-slate-500">
             {dict.marketing.line}
           </p>
-        </div>
+        </Reveal>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {dict.serviceCategories.map((category) => (
-            <ServiceCategoryCard key={category.id} category={category} />
+          {dict.serviceCategories.map((category, i) => (
+            <Reveal key={category.id} delay={i * 70}>
+              <ServiceCategoryCard category={category} />
+            </Reveal>
           ))}
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-20 lg:px-8 lg:pb-28">
-        <div className="rounded-3xl bg-navy-950 px-8 py-14 text-center sm:px-16">
+        <Reveal className="rounded-3xl bg-navy-950 px-8 py-14 text-center sm:px-16">
           <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
             {dict.cta.title}
           </h2>
@@ -56,7 +59,7 @@ export default async function ServicesPage({
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-        </div>
+        </Reveal>
       </section>
     </>
   );

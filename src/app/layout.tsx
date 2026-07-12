@@ -30,7 +30,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-white text-[var(--foreground)]">{children}</body>
+      <body className="min-h-full flex flex-col bg-white text-[var(--foreground)]">
+        <noscript>
+          <style>{`.opacity-0{opacity:1 !important}.translate-y-6{transform:none !important}`}</style>
+        </noscript>
+        {children}
+      </body>
     </html>
   );
 }

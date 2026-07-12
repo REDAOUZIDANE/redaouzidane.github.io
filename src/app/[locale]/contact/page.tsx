@@ -3,6 +3,7 @@ import { isLocale, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/getDictionary";
 import { Eyebrow } from "@/components/Eyebrow";
 import { ContactForm } from "@/components/ContactForm";
+import { Reveal } from "@/components/Reveal";
 import { notFound } from "next/navigation";
 
 export default async function ContactPage({
@@ -19,16 +20,16 @@ export default async function ContactPage({
   return (
     <section className="bg-grid">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-2xl text-center">
+        <Reveal className="mx-auto max-w-2xl text-center">
           <Eyebrow>{contact.eyebrow}</Eyebrow>
           <h1 className="text-4xl font-extrabold tracking-tight text-navy-950 sm:text-5xl">
             {contact.title}
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-lg text-slate-600">{contact.subtitle}</p>
-        </div>
+        </Reveal>
 
         <div className="mx-auto mt-14 grid max-w-5xl grid-cols-1 gap-10 lg:grid-cols-[1fr_1.3fr]">
-          <div className="space-y-6">
+          <Reveal className="space-y-6">
             <div className="rounded-2xl border border-slate-200 bg-white p-7">
               <h2 className="font-display text-lg font-bold text-navy-950">{contact.infoTitle}</h2>
               <ul className="mt-5 space-y-5">
@@ -54,14 +55,14 @@ export default async function ContactPage({
                 </li>
               </ul>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-7 sm:p-9">
+          <Reveal delay={120} className="rounded-2xl border border-slate-200 bg-white p-7 sm:p-9">
             <h2 className="font-display text-lg font-bold text-navy-950">{contact.formTitle}</h2>
             <div className="mt-6">
               <ContactForm dict={dict} />
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

@@ -78,8 +78,40 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.blob-float {
+  animation: blob-float 9s ease-in-out infinite;
+}
+
+.blob-float-delay {
+  animation: blob-float 11s ease-in-out infinite;
+  animation-delay: -4s;
+}
+
+@keyframes blob-float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-3%, 4%) scale(1.08);
+  }
+}
+
+.card-lift {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .ticker-track {
+  .ticker-track,
+  .blob-float,
+  .blob-float-delay {
     animation: none;
+  }
+
+  .card-lift:hover {
+    transform: none;
   }
 }
