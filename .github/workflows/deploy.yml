@@ -36,13 +36,32 @@ jobs:
 
       - name: Build (static export)
         env:
-          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          NEXT_PUBLIC_BASE_PATH: /limbo-consulting
         run: npm run build
+
+      - name: Assemble Pages artifact under /limbo-consulting
+        run: |
+          mkdir -p deploy-root
+          mv out deploy-root/limbo-consulting
+          cat > deploy-root/index.html <<'HTML'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="refresh" content="0; url=/limbo-consulting/" />
+            <title>LIMBO Consulting</title>
+          </head>
+          <body>
+            <p>Redirecting to <a href="/limbo-consulting/">LIMBO Consulting</a>&hellip;</p>
+            <script>window.location.replace("/limbo-consulting/");</script>
+          </body>
+          </html>
+          HTML
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./deploy-root
 
   deploy:
     environment:

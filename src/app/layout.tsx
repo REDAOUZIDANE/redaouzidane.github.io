@@ -18,9 +18,6 @@ export const metadata: Metadata = {
   title: "LIMBO Consulting — Industry 4.0 & Digital Transformation Consulting",
   description:
     "LIMBO Consulting helps manufacturers achieve operational excellence through Industry 4.0 technologies, Lean Six Sigma, and data-driven decision-making.",
-  icons: {
-    icon: "/favicon.ico",
-  },
 };
 
 export default function RootLayout({
