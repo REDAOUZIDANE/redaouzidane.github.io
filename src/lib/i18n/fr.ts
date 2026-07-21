@@ -309,6 +309,38 @@ const fr: Dictionary = {
     contactTitle: "Contact",
     rights: "Tous droits réservés.",
   },
+  portal: {
+    navLabel: "Espace client",
+    login: {
+      eyebrow: "Espace client",
+      title: "Content de vous revoir",
+      subtitle: "Connectez-vous pour échanger avec nous et accéder aux fichiers livrés pour votre projet.",
+      emailLabel: "E-mail",
+      passwordLabel: "Mot de passe",
+      submit: "Se connecter",
+      submitting: "Connexion…",
+      forgotHint: "Mot de passe oublié, ou besoin d'un compte ? Contactez-nous et nous vous en créerons un.",
+      notConfigured: "L'espace client n'est pas encore connecté — revenez bientôt.",
+      backHome: "Retour à l'accueil",
+    },
+    room: {
+      title: "Espace projet",
+      welcomeBack: "Connecté en tant que",
+      signOut: "Se déconnecter",
+      messagesTitle: "Messages",
+      messagePlaceholder: "Écrire un message…",
+      send: "Envoyer",
+      noMessages: "Aucun message pour le moment — dites bonjour.",
+      filesTitle: "Fichiers livrés",
+      noFiles: "Aucun fichier n'a encore été livré.",
+      uploadLabel: "Envoyer un fichier",
+      uploading: "Envoi…",
+      download: "Télécharger",
+      adminRoomLabel: "Espace affiché pour",
+      loadingRoom: "Chargement de votre espace projet…",
+      loadingSession: "Vérification de votre session…",
+    },
+  },
 };
 
 export default fr;

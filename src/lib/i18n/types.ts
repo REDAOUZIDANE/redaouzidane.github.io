@@ -136,4 +136,36 @@ export type Dictionary = {
     contactTitle: string;
     rights: string;
   };
+  portal: {
+    navLabel: string;
+    login: {
+      eyebrow: string;
+      title: string;
+      subtitle: string;
+      emailLabel: string;
+      passwordLabel: string;
+      submit: string;
+      submitting: string;
+      forgotHint: string;
+      notConfigured: string;
+      backHome: string;
+    };
+    room: {
+      title: string;
+      welcomeBack: string;
+      signOut: string;
+      messagesTitle: string;
+      messagePlaceholder: string;
+      send: string;
+      noMessages: string;
+      filesTitle: string;
+      noFiles: string;
+      uploadLabel: string;
+      uploading: string;
+      download: string;
+      adminRoomLabel: string;
+      loadingRoom: string;
+      loadingSession: string;
+    };
+  };
 };

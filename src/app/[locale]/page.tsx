@@ -8,6 +8,8 @@ import { ServiceCategoryCard } from "@/components/ServiceCategoryCard";
 import { Reveal } from "@/components/Reveal";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { FounderTeaser } from "@/components/FounderSection";
+import { HeroBlobs } from "@/components/HeroBlobs";
+import { TiltWrapper } from "@/components/TiltWrapper";
 import { notFound } from "next/navigation";
 
 export default async function HomePage({
@@ -24,8 +26,7 @@ export default async function HomePage({
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-grid">
-        <div className="blob-float pointer-events-none absolute -top-32 right-[-10%] h-96 w-96 rounded-full bg-green-100 blur-3xl" />
-        <div className="blob-float-delay pointer-events-none absolute -bottom-32 left-[-10%] h-96 w-96 rounded-full bg-navy-900/5 blur-3xl" />
+        <HeroBlobs />
         <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-8 lg:pb-28 lg:pt-24">
           <div className="mx-auto max-w-3xl text-center">
             <Eyebrow>{dict.hero.eyebrow}</Eyebrow>
@@ -82,7 +83,9 @@ export default async function HomePage({
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {dict.serviceCategories.map((category, i) => (
             <Reveal key={category.id} delay={i * 80}>
-              <ServiceCategoryCard category={category} compact />
+              <TiltWrapper>
+                <ServiceCategoryCard category={category} compact />
+              </TiltWrapper>
             </Reveal>
           ))}
         </div>

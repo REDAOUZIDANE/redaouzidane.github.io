@@ -5,6 +5,7 @@ import { getDictionary } from "@/lib/i18n/getDictionary";
 import { Eyebrow } from "@/components/Eyebrow";
 import { ServiceCategoryCard } from "@/components/ServiceCategoryCard";
 import { Reveal } from "@/components/Reveal";
+import { TiltWrapper } from "@/components/TiltWrapper";
 import { notFound } from "next/navigation";
 
 export default async function ServicesPage({
@@ -38,7 +39,9 @@ export default async function ServicesPage({
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {dict.serviceCategories.map((category, i) => (
             <Reveal key={category.id} delay={i * 70}>
-              <ServiceCategoryCard category={category} />
+              <TiltWrapper>
+                <ServiceCategoryCard category={category} />
+              </TiltWrapper>
             </Reveal>
           ))}
         </div>

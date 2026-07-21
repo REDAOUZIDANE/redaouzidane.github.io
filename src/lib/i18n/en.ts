@@ -309,6 +309,38 @@ const en: Dictionary = {
     contactTitle: "Contact",
     rights: "All rights reserved.",
   },
+  portal: {
+    navLabel: "Client login",
+    login: {
+      eyebrow: "Client portal",
+      title: "Welcome back",
+      subtitle: "Sign in to message us and access your delivered project files.",
+      emailLabel: "Email",
+      passwordLabel: "Password",
+      submit: "Sign in",
+      submitting: "Signing in…",
+      forgotHint: "Forgotten your password, or need an account? Contact us and we'll set you up.",
+      notConfigured: "The client portal isn't connected yet — check back soon.",
+      backHome: "Back to homepage",
+    },
+    room: {
+      title: "Project room",
+      welcomeBack: "Signed in as",
+      signOut: "Sign out",
+      messagesTitle: "Messages",
+      messagePlaceholder: "Write a message…",
+      send: "Send",
+      noMessages: "No messages yet — say hello.",
+      filesTitle: "Delivered files",
+      noFiles: "No files have been delivered yet.",
+      uploadLabel: "Upload a file",
+      uploading: "Uploading…",
+      download: "Download",
+      adminRoomLabel: "Viewing room for",
+      loadingRoom: "Loading your project room…",
+      loadingSession: "Checking your session…",
+    },
+  },
 };
 
 export default en;

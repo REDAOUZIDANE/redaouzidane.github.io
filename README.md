@@ -3,14 +3,18 @@
 Marketing website for LIMBO Consulting — industrial engineering & digital
 transformation consulting (Industry 4.0, MES/ERP/WMS/CMMS, IIoT, AI,
 Digital Twin, Power BI, Lean Six Sigma). Built with Next.js (App Router),
-exported as a fully static site, bilingual in English and French.
+exported as a fully static site, bilingual in English and French, plus a
+client portal backed by Supabase.
+
+Live at: https://redaouzidane.github.io/limbo-consulting/
 
 ## Stack
 
 - Next.js 16 (App Router, static export via `output: "export"`)
 - TypeScript + Tailwind CSS v4
 - lucide-react icons
-- No backend — the contact form opens the visitor's email client (`mailto:`) with a pre-filled message
+- The public contact form opens the visitor's email client (`mailto:`) — no backend needed for it
+- The client portal (`/portal`) uses [Supabase](https://supabase.com) for auth, database, storage, and realtime messaging — see below
 
 ## Local development
 
@@ -47,23 +51,52 @@ real LIMBO Consulting logo file by replacing that component (or dropping
 `logo.svg`/`logo.png` into `public/` and rendering it with `next/image`
 there instead).
 
-## Deploying to GitHub Pages
+## Client portal (`/portal`)
 
-A workflow at `.github/workflows/deploy.yml` builds and deploys the site
-automatically on every push to `main`.
+Clients sign in at `/[locale]/portal/login/` and land on a per-client
+"room" (`/[locale]/portal/`) to exchange messages and delivered files with
+LIMBO Consulting. It's built entirely client-side against Supabase, so it
+still works from a static export with no server.
 
 **One-time setup:**
 
-1. Create a GitHub repository and push this project to it.
-2. In the repo, go to **Settings → Pages** and set **Source** to
-   **GitHub Actions**.
-3. Push to `main` (or run the workflow manually from the **Actions** tab).
+1. Create a free project at [supabase.com](https://supabase.com).
+2. Open the **SQL Editor** and run `supabase/schema.sql` from this repo —
+   it creates the `profiles`/`rooms`/`messages`/`files` tables, Row Level
+   Security policies, the `deliverables` storage bucket, and a trigger
+   that auto-provisions a profile + room for every new signed-up user.
+3. In **Project Settings → API**, copy the **Project URL** and the
+   **anon public** key.
+4. For local dev: copy `.env.local.example` to `.env.local` and fill in
+   those two values.
+5. For production: add them as **repository secrets** (Settings →
+   Secrets and variables → Actions) named exactly
+   `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` — the
+   deploy workflow already reads them from there.
+6. Create your own account by signing in once through Supabase's
+   dashboard (**Authentication → Users → Add user**), then in the SQL
+   Editor run:
+   ```sql
+   update public.profiles set is_admin = true where email = 'you@example.com';
+   ```
+   Admins see a room-switcher and can view/message/upload files for every
+   client. To onboard a client, invite them the same way (Authentication →
+   Users → Invite) — the schema's trigger creates their profile and room
+   automatically on first sign-in.
 
-The workflow auto-detects the correct base path for a project page
-(`https://<user>.github.io/<repo>/`) or a user/organization page
-(`https://<user>.github.io/`) — no manual configuration needed. If you
-later attach a custom domain via **Settings → Pages → Custom domain**,
-add a `public/CNAME` file with the domain name.
+The anon key is meant to be public (same model as Firebase's client
+config) — actual access control is enforced by the RLS policies in
+`supabase/schema.sql`, not by keeping that key secret.
+
+## Deploying to GitHub Pages
+
+This repo is `redaouzidane.github.io` (a GitHub user-page repo, so Pages
+is auto-enabled with no manual settings toggle). The workflow at
+`.github/workflows/deploy.yml` builds on every push to `main` and
+publishes the site under `/limbo-consulting/`, with a small redirect page
+at the domain root sending visitors there. To reuse this setup for a
+different repo/domain, adjust the hardcoded `NEXT_PUBLIC_BASE_PATH` in the
+workflow (and the redirect HTML it generates) to match.
 
 ## Building manually
 
@@ -72,4 +105,8 @@ npm run build
 ```
 
 Static output is written to `out/`. Serve it with any static host
-(Netlify, Vercel, S3, Nginx, etc.) — no Node.js server required.
+(Netlify, Vercel, S3, Nginx, etc.) — no Node.js server required for the
+marketing pages. The portal pages need `NEXT_PUBLIC_SUPABASE_URL` /
+`NEXT_PUBLIC_SUPABASE_ANON_KEY` set at build time to function; without
+them they render a graceful "not connected yet" message instead of
+erroring.
