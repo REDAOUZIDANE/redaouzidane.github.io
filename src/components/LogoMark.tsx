@@ -31,7 +31,7 @@ export function LogoLockup({ className, variant = "color" }: LogoMarkProps) {
       <LogoMark variant={variant} className="h-8 w-8 shrink-0" />
       <span className="flex items-baseline gap-1 font-display leading-none tracking-tight">
         <span className={`text-lg font-extrabold ${isWhite ? "text-white" : "text-navy-950"}`}>
-          Hindo
+          LIMBO
         </span>
         <span className={`text-lg font-medium ${isWhite ? "text-white/80" : "text-slate-600"}`}>
           Consulting

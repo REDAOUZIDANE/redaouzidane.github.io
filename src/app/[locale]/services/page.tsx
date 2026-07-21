@@ -20,7 +20,7 @@ export default async function ServicesPage({
   return (
     <>
       <section className="bg-grid border-b border-slate-100">
-        <Reveal className="mx-auto max-w-7xl px-6 py-16 text-center lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-7xl px-6 py-16 text-center lg:px-8 lg:py-24">
           <Eyebrow>{dict.nav.services}</Eyebrow>
           <h1 className="mx-auto max-w-3xl text-4xl font-extrabold tracking-tight text-navy-950 sm:text-5xl">
             {dict.servicesOverview.title}
@@ -31,7 +31,7 @@ export default async function ServicesPage({
           <p className="mx-auto mt-6 max-w-3xl text-sm font-medium text-slate-500">
             {dict.marketing.line}
           </p>
-        </Reveal>
+        </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">

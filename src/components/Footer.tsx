@@ -75,7 +75,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 text-xs text-slate-500 sm:flex-row sm:items-center">
           <p>
-            © {year} HindoConsulting. {dict.footer.rights}
+            © {year} LIMBO Consulting. {dict.footer.rights}
           </p>
           <p className="text-slate-500">
             {dict.marketing.line}

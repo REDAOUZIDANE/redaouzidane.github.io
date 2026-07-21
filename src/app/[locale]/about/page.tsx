@@ -22,7 +22,7 @@ export default async function AboutPage({
   return (
     <>
       <section className="bg-grid border-b border-slate-100">
-        <Reveal className="mx-auto max-w-4xl px-6 py-16 text-center lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-4xl px-6 py-16 text-center lg:px-8 lg:py-24">
           <Eyebrow>{about.eyebrow}</Eyebrow>
           <h1 className="text-4xl font-extrabold tracking-tight text-navy-950 sm:text-5xl">
             {about.title}
@@ -30,7 +30,7 @@ export default async function AboutPage({
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
             {about.intro}
           </p>
-        </Reveal>
+        </div>
       </section>
 
       <section className="mx-auto max-w-4xl px-6 py-16 lg:px-8 lg:py-20">

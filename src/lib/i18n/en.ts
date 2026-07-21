@@ -2,9 +2,9 @@ import type { Dictionary } from "./types";
 
 const en: Dictionary = {
   meta: {
-    title: "HindoConsulting — Industry 4.0 & Digital Transformation Consulting",
+    title: "LIMBO Consulting — Industry 4.0 & Digital Transformation Consulting",
     description:
-      "HindoConsulting helps manufacturers achieve operational excellence through Industry 4.0 technologies, Lean Six Sigma, and data-driven decision-making. MES, ERP, WMS, CMMS, IIoT, AI, Digital Twin, Power BI and more.",
+      "LIMBO Consulting helps manufacturers achieve operational excellence through Industry 4.0 technologies, Lean Six Sigma, and data-driven decision-making. MES, ERP, WMS, CMMS, IIoT, AI, Digital Twin, Power BI and more.",
   },
   nav: {
     home: "Home",
@@ -136,7 +136,7 @@ const en: Dictionary = {
     },
   ],
   whyUs: {
-    eyebrow: "Why HindoConsulting",
+    eyebrow: "Why LIMBO Consulting",
     title: "Engineers first. Consultants by craft.",
     subtitle:
       "We pair deep industrial engineering expertise with hands-on digital delivery — so recommendations are grounded in what actually works on the shop floor.",
@@ -206,7 +206,7 @@ const en: Dictionary = {
     eyebrow: "About us",
     title: "Industrial engineering meets digital transformation",
     intro:
-      "HindoConsulting is an industrial engineering and digital transformation consulting firm dedicated to helping manufacturers achieve operational excellence through Industry 4.0 technologies, Lean Six Sigma methodologies, and data-driven decision-making.",
+      "LIMBO Consulting is an industrial engineering and digital transformation consulting firm dedicated to helping manufacturers achieve operational excellence through Industry 4.0 technologies, Lean Six Sigma methodologies, and data-driven decision-making.",
     paragraphs: [
       "We partner with organizations to optimize processes, reduce operational costs, improve productivity, and accelerate digital transformation by integrating smart manufacturing solutions, automation, business intelligence, and continuous improvement strategies.",
       "Our approach connects the strategic, technological, and human sides of transformation: we design the roadmap, select and deploy the right systems — MES, ERP, WMS, CMMS, PLM, SCM, APS — and build the Lean Six Sigma culture needed to sustain the gains.",
@@ -251,9 +251,9 @@ const en: Dictionary = {
     role: "Founder & CEO",
     credential: "State Engineer in Industrial Engineering — ESITH Casablanca",
     bio: [
-      "HindoConsulting was founded by Reda Ouzidane, a State-certified Industrial Engineer who builds the same digital manufacturing systems he advises clients on. During his engineering studies, he designed and deployed a Warehouse Management System for DOUNITEX Confection SA that cut processing time and delivered an estimated 240,000 MAD in annual operational savings — a 30%+ efficiency gain.",
+      "LIMBO Consulting was founded by Reda Ouzidane, a State-certified Industrial Engineer who builds the same digital manufacturing systems he advises clients on. During his engineering studies, he designed and deployed a Warehouse Management System for DOUNITEX Confection SA that cut processing time and delivered an estimated 240,000 MAD in annual operational savings — a 30%+ efficiency gain.",
       "He has won multiple national and international innovation competitions, including first place at the Teal Technology Services \"AI for Industry\" Hackathon for an AI-driven industrial cybersecurity platform, and represented Morocco as a top-10 finalist among 77 projects from 5 countries at the IEEE ICCITX.0 International Innovation Competition.",
-      "He holds certifications in Six Sigma Green Belt, Data Analytics, Data Science, and Project Management, with hands-on experience in full-stack development and industrial systems security — the same disciplines HindoConsulting brings to every engagement.",
+      "He holds certifications in Six Sigma Green Belt, Data Analytics, Data Science, and Project Management, with hands-on experience in full-stack development and industrial systems security — the same disciplines LIMBO Consulting brings to every engagement.",
     ],
     badges: [
       "State Engineer, Industrial Engineering — ESITH",
@@ -268,7 +268,7 @@ const en: Dictionary = {
       { value: "5+", label: "Innovation & hackathon awards" },
     ],
     homeTeaser:
-      "Founded by an award-winning industrial engineer who has personally designed and deployed the same MES/WMS and digital systems HindoConsulting delivers for clients.",
+      "Founded by an award-winning industrial engineer who has personally designed and deployed the same MES/WMS and digital systems LIMBO Consulting delivers for clients.",
     homeCta: "Meet the founder",
   },
   contact: {
@@ -284,7 +284,7 @@ const en: Dictionary = {
       phone: "Phone (optional)",
       message: "Message",
       submit: "Send message",
-      subjectDefault: "New inquiry from the HindoConsulting website",
+      subjectDefault: "New inquiry from the LIMBO Consulting website",
     },
     placeholders: {
       name: "Jane Doe",
@@ -294,7 +294,7 @@ const en: Dictionary = {
       message: "Tell us about your project, current systems, and objectives...",
     },
     infoTitle: "Contact information",
-    email: "contact@hindoconsulting.com",
+    email: "contact@limboconsulting.com",
     location: "Based in",
     locationValue: "Serving manufacturers globally — on-site & remote",
     hoursLabel: "Availability",

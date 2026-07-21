@@ -1,6 +1,6 @@
-# HindoConsulting Website
+# LIMBO Consulting Website
 
-Marketing website for HindoConsulting — industrial engineering & digital
+Marketing website for LIMBO Consulting — industrial engineering & digital
 transformation consulting (Industry 4.0, MES/ERP/WMS/CMMS, IIoT, AI,
 Digital Twin, Power BI, Lean Six Sigma). Built with Next.js (App Router),
 exported as a fully static site, bilingual in English and French.
@@ -43,7 +43,7 @@ Colors and fonts are defined in `src/app/globals.css` (`--color-navy-*`,
 `--color-green-*`) and `src/app/layout.tsx` (Inter + Manrope via
 `next/font/google`). The header/footer logo is a placeholder SVG mark at
 `src/components/LogoMark.tsx` built from the brand colors — swap in the
-real HindoConsulting logo file by replacing that component (or dropping
+real LIMBO Consulting logo file by replacing that component (or dropping
 `logo.svg`/`logo.png` into `public/` and rendering it with `next/image`
 there instead).
 

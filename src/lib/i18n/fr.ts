@@ -2,9 +2,9 @@ import type { Dictionary } from "./types";
 
 const fr: Dictionary = {
   meta: {
-    title: "HindoConsulting — Conseil en Industrie 4.0 & Transformation Digitale",
+    title: "LIMBO Consulting — Conseil en Industrie 4.0 & Transformation Digitale",
     description:
-      "HindoConsulting aide les industriels à atteindre l'excellence opérationnelle grâce aux technologies Industrie 4.0, au Lean Six Sigma et à la prise de décision par la donnée. MES, ERP, WMS, GMAO, IIoT, IA, Jumeau Numérique, Power BI et plus.",
+      "LIMBO Consulting aide les industriels à atteindre l'excellence opérationnelle grâce aux technologies Industrie 4.0, au Lean Six Sigma et à la prise de décision par la donnée. MES, ERP, WMS, GMAO, IIoT, IA, Jumeau Numérique, Power BI et plus.",
   },
   nav: {
     home: "Accueil",
@@ -136,7 +136,7 @@ const fr: Dictionary = {
     },
   ],
   whyUs: {
-    eyebrow: "Pourquoi HindoConsulting",
+    eyebrow: "Pourquoi LIMBO Consulting",
     title: "Ingénieurs avant tout. Consultants par métier.",
     subtitle:
       "Nous associons une expertise pointue en ingénierie industrielle à une exécution digitale concrète — pour des recommandations ancrées dans la réalité du terrain.",
@@ -206,7 +206,7 @@ const fr: Dictionary = {
     eyebrow: "À propos",
     title: "L'ingénierie industrielle au service de la transformation digitale",
     intro:
-      "HindoConsulting est un cabinet de conseil en ingénierie industrielle et transformation digitale, dédié à aider les industriels à atteindre l'excellence opérationnelle grâce aux technologies Industrie 4.0, aux méthodologies Lean Six Sigma et à la prise de décision par la donnée.",
+      "LIMBO Consulting est un cabinet de conseil en ingénierie industrielle et transformation digitale, dédié à aider les industriels à atteindre l'excellence opérationnelle grâce aux technologies Industrie 4.0, aux méthodologies Lean Six Sigma et à la prise de décision par la donnée.",
     paragraphs: [
       "Nous accompagnons les organisations pour optimiser leurs processus, réduire leurs coûts opérationnels, améliorer leur productivité et accélérer leur transformation digitale, en intégrant solutions de production intelligente, automatisation, business intelligence et démarches d'amélioration continue.",
       "Notre approche relie les dimensions stratégique, technologique et humaine de la transformation : nous concevons la feuille de route, sélectionnons et déployons les bons systèmes — MES, ERP, WMS, GMAO, PLM, SCM, APS — et bâtissons la culture Lean Six Sigma nécessaire pour pérenniser les gains.",
@@ -251,9 +251,9 @@ const fr: Dictionary = {
     role: "Fondateur & CEO",
     credential: "Ingénieur d'État en Génie Industriel — ESITH Casablanca",
     bio: [
-      "HindoConsulting a été fondé par Reda Ouzidane, Ingénieur d'État en Génie Industriel, qui conçoit lui-même les systèmes de production digitalisés sur lesquels il conseille ses clients. Durant ses études, il a conçu et déployé un Warehouse Management System (WMS) pour DOUNITEX Confection SA, réduisant les temps de traitement et générant un impact opérationnel estimé à 240 000 MAD par an — soit un gain d'efficacité de plus de 30 %.",
+      "LIMBO Consulting a été fondé par Reda Ouzidane, Ingénieur d'État en Génie Industriel, qui conçoit lui-même les systèmes de production digitalisés sur lesquels il conseille ses clients. Durant ses études, il a conçu et déployé un Warehouse Management System (WMS) pour DOUNITEX Confection SA, réduisant les temps de traitement et générant un impact opérationnel estimé à 240 000 MAD par an — soit un gain d'efficacité de plus de 30 %.",
       "Il a remporté plusieurs compétitions d'innovation nationales et internationales, dont la première place du hackathon « AI for Industry » de Teal Technology Services pour une plateforme de cybersécurité industrielle pilotée par l'IA, et a représenté le Maroc en tant que finaliste top 10 parmi 77 projets venus de 5 pays lors du concours international d'innovation IEEE ICCITX.0.",
-      "Il est certifié Lean Six Sigma Green Belt, Data Analytics, Data Science et Project Management, avec une expérience pratique en développement full-stack et en sécurité des systèmes industriels — les mêmes disciplines que HindoConsulting mobilise pour chaque mission.",
+      "Il est certifié Lean Six Sigma Green Belt, Data Analytics, Data Science et Project Management, avec une expérience pratique en développement full-stack et en sécurité des systèmes industriels — les mêmes disciplines que LIMBO Consulting mobilise pour chaque mission.",
     ],
     badges: [
       "Ingénieur d'État, Génie Industriel — ESITH",
@@ -268,7 +268,7 @@ const fr: Dictionary = {
       { value: "5+", label: "Prix d'innovation & hackathons" },
     ],
     homeTeaser:
-      "Fondé par un ingénieur industriel primé, qui a lui-même conçu et déployé les systèmes MES/WMS et digitaux qu'HindoConsulting déploie pour ses clients.",
+      "Fondé par un ingénieur industriel primé, qui a lui-même conçu et déployé les systèmes MES/WMS et digitaux que LIMBO Consulting déploie pour ses clients.",
     homeCta: "Découvrir le fondateur",
   },
   contact: {
@@ -284,7 +284,7 @@ const fr: Dictionary = {
       phone: "Téléphone (optionnel)",
       message: "Message",
       submit: "Envoyer le message",
-      subjectDefault: "Nouvelle demande depuis le site HindoConsulting",
+      subjectDefault: "Nouvelle demande depuis le site LIMBO Consulting",
     },
     placeholders: {
       name: "Jean Dupont",
@@ -294,7 +294,7 @@ const fr: Dictionary = {
       message: "Décrivez-nous votre projet, vos systèmes actuels et vos objectifs...",
     },
     infoTitle: "Coordonnées",
-    email: "contact@hindoconsulting.com",
+    email: "contact@limboconsulting.com",
     location: "Basés à",
     locationValue: "Intervention internationale — sur site & à distance",
     hoursLabel: "Disponibilité",

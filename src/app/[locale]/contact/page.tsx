@@ -20,13 +20,13 @@ export default async function ContactPage({
   return (
     <section className="bg-grid">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
-        <Reveal className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-2xl text-center">
           <Eyebrow>{contact.eyebrow}</Eyebrow>
           <h1 className="text-4xl font-extrabold tracking-tight text-navy-950 sm:text-5xl">
             {contact.title}
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-lg text-slate-600">{contact.subtitle}</p>
-        </Reveal>
+        </div>
 
         <div className="mx-auto mt-14 grid max-w-5xl grid-cols-1 gap-10 lg:grid-cols-[1fr_1.3fr]">
           <Reveal className="space-y-6">

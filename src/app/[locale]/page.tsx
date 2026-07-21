@@ -27,7 +27,7 @@ export default async function HomePage({
         <div className="blob-float pointer-events-none absolute -top-32 right-[-10%] h-96 w-96 rounded-full bg-green-100 blur-3xl" />
         <div className="blob-float-delay pointer-events-none absolute -bottom-32 left-[-10%] h-96 w-96 rounded-full bg-navy-900/5 blur-3xl" />
         <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-8 lg:pb-28 lg:pt-24">
-          <Reveal className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto max-w-3xl text-center">
             <Eyebrow>{dict.hero.eyebrow}</Eyebrow>
             <h1 className="text-4xl font-extrabold tracking-tight text-navy-950 sm:text-5xl lg:text-6xl">
               {dict.hero.title}
@@ -52,9 +52,9 @@ export default async function HomePage({
                 {dict.hero.ctaSecondary}
               </Link>
             </div>
-          </Reveal>
+          </div>
 
-          <Reveal delay={150} className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-6 sm:grid-cols-3">
+          <div className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-6 sm:grid-cols-3">
             {dict.hero.stats.map((stat) => (
               <div key={stat.label} className="rounded-2xl border border-slate-200 bg-white/70 px-6 py-6 text-center backdrop-blur">
                 <p className="font-display text-3xl font-extrabold text-navy-950">
@@ -63,7 +63,7 @@ export default async function HomePage({
                 <p className="mt-1 text-sm text-slate-500">{stat.label}</p>
               </div>
             ))}
-          </Reveal>
+          </div>
         </div>
 
         <Ticker items={dict.hero.ticker} />

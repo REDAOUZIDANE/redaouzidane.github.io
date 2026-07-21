@@ -15,9 +15,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "HindoConsulting — Industry 4.0 & Digital Transformation Consulting",
+  title: "LIMBO Consulting — Industry 4.0 & Digital Transformation Consulting",
   description:
-    "HindoConsulting helps manufacturers achieve operational excellence through Industry 4.0 technologies, Lean Six Sigma, and data-driven decision-making.",
+    "LIMBO Consulting helps manufacturers achieve operational excellence through Industry 4.0 technologies, Lean Six Sigma, and data-driven decision-making.",
   icons: {
     icon: "/favicon.ico",
   },
