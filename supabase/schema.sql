@@ -149,7 +149,7 @@ create policy "deliverables_select_participants" on storage.objects
     bucket_id = 'deliverables'
     and exists (
       select 1 from public.rooms r
-      where r.id::text = (storage.foldername(name))[1]
+      where storage.objects.name like (r.id::text || '/%')
         and (r.client_id = auth.uid() or public.is_admin())
     )
   );
@@ -160,7 +160,7 @@ create policy "deliverables_insert_participants" on storage.objects
     bucket_id = 'deliverables'
     and exists (
       select 1 from public.rooms r
-      where r.id::text = (storage.foldername(name))[1]
+      where storage.objects.name like (r.id::text || '/%')
         and (r.client_id = auth.uid() or public.is_admin())
     )
   );
