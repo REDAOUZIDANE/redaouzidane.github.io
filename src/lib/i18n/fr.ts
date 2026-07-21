@@ -244,6 +244,33 @@ const fr: Dictionary = {
       { value: "1", label: "Partenaire, de bout en bout" },
     ],
   },
+  founder: {
+    eyebrow: "Notre fondateur",
+    title: "Dirigé par un ingénieur, pas seulement un stratège",
+    name: "Reda Ouzidane",
+    role: "Fondateur & CEO",
+    credential: "Ingénieur d'État en Génie Industriel — ESITH Casablanca",
+    bio: [
+      "HindoConsulting a été fondé par Reda Ouzidane, Ingénieur d'État en Génie Industriel, qui conçoit lui-même les systèmes de production digitalisés sur lesquels il conseille ses clients. Durant ses études, il a conçu et déployé un Warehouse Management System (WMS) pour DOUNITEX Confection SA, réduisant les temps de traitement et générant un impact opérationnel estimé à 240 000 MAD par an — soit un gain d'efficacité de plus de 30 %.",
+      "Il a remporté plusieurs compétitions d'innovation nationales et internationales, dont la première place du hackathon « AI for Industry » de Teal Technology Services pour une plateforme de cybersécurité industrielle pilotée par l'IA, et a représenté le Maroc en tant que finaliste top 10 parmi 77 projets venus de 5 pays lors du concours international d'innovation IEEE ICCITX.0.",
+      "Il est certifié Lean Six Sigma Green Belt, Data Analytics, Data Science et Project Management, avec une expérience pratique en développement full-stack et en sécurité des systèmes industriels — les mêmes disciplines que HindoConsulting mobilise pour chaque mission.",
+    ],
+    badges: [
+      "Ingénieur d'État, Génie Industriel — ESITH",
+      "Six Sigma Green Belt",
+      "Google Data Analytics",
+      "Google Project Management",
+      "IBM Data Science",
+    ],
+    stats: [
+      { value: "30%+", label: "Gain d'efficacité livré (projet WMS)" },
+      { value: "240K", label: "MAD/an d'impact estimé" },
+      { value: "5+", label: "Prix d'innovation & hackathons" },
+    ],
+    homeTeaser:
+      "Fondé par un ingénieur industriel primé, qui a lui-même conçu et déployé les systèmes MES/WMS et digitaux qu'HindoConsulting déploie pour ses clients.",
+    homeCta: "Découvrir le fondateur",
+  },
   contact: {
     eyebrow: "Contactez-nous",
     title: "Parlons de votre transformation",

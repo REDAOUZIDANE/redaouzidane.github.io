@@ -244,6 +244,33 @@ const en: Dictionary = {
       { value: "1", label: "Partner, end-to-end" },
     ],
   },
+  founder: {
+    eyebrow: "Meet the founder",
+    title: "Led by an engineer, not just a strategist",
+    name: "Reda Ouzidane",
+    role: "Founder & CEO",
+    credential: "State Engineer in Industrial Engineering — ESITH Casablanca",
+    bio: [
+      "HindoConsulting was founded by Reda Ouzidane, a State-certified Industrial Engineer who builds the same digital manufacturing systems he advises clients on. During his engineering studies, he designed and deployed a Warehouse Management System for DOUNITEX Confection SA that cut processing time and delivered an estimated 240,000 MAD in annual operational savings — a 30%+ efficiency gain.",
+      "He has won multiple national and international innovation competitions, including first place at the Teal Technology Services \"AI for Industry\" Hackathon for an AI-driven industrial cybersecurity platform, and represented Morocco as a top-10 finalist among 77 projects from 5 countries at the IEEE ICCITX.0 International Innovation Competition.",
+      "He holds certifications in Six Sigma Green Belt, Data Analytics, Data Science, and Project Management, with hands-on experience in full-stack development and industrial systems security — the same disciplines HindoConsulting brings to every engagement.",
+    ],
+    badges: [
+      "State Engineer, Industrial Engineering — ESITH",
+      "Six Sigma Green Belt",
+      "Google Data Analytics",
+      "Google Project Management",
+      "IBM Data Science",
+    ],
+    stats: [
+      { value: "30%+", label: "Efficiency gain delivered (WMS project)" },
+      { value: "240K", label: "MAD/yr estimated impact" },
+      { value: "5+", label: "Innovation & hackathon awards" },
+    ],
+    homeTeaser:
+      "Founded by an award-winning industrial engineer who has personally designed and deployed the same MES/WMS and digital systems HindoConsulting delivers for clients.",
+    homeCta: "Meet the founder",
+  },
   contact: {
     eyebrow: "Get in touch",
     title: "Let's talk about your transformation",

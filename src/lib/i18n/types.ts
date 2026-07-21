@@ -88,6 +88,18 @@ export type Dictionary = {
     statsTitle: string;
     stats: Stat[];
   };
+  founder: {
+    eyebrow: string;
+    title: string;
+    name: string;
+    role: string;
+    credential: string;
+    bio: string[];
+    badges: string[];
+    stats: Stat[];
+    homeTeaser: string;
+    homeCta: string;
+  };
   contact: {
     eyebrow: string;
     title: string;

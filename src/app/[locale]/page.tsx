@@ -7,6 +7,7 @@ import { Ticker } from "@/components/Ticker";
 import { ServiceCategoryCard } from "@/components/ServiceCategoryCard";
 import { Reveal } from "@/components/Reveal";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
+import { FounderTeaser } from "@/components/FounderSection";
 import { notFound } from "next/navigation";
 
 export default async function HomePage({
@@ -144,6 +145,8 @@ export default async function HomePage({
           ))}
         </div>
       </section>
+
+      <FounderTeaser dict={dict} locale={locale} />
 
       {/* CTA */}
       <section className="mx-auto max-w-7xl px-6 pb-20 lg:px-8 lg:pb-28">

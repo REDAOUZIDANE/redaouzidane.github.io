@@ -5,6 +5,7 @@ import { getDictionary } from "@/lib/i18n/getDictionary";
 import { Eyebrow } from "@/components/Eyebrow";
 import { Reveal } from "@/components/Reveal";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
+import { FounderSection } from "@/components/FounderSection";
 import { notFound } from "next/navigation";
 
 export default async function AboutPage({
@@ -69,6 +70,8 @@ export default async function AboutPage({
           ))}
         </Reveal>
       </section>
+
+      <FounderSection dict={dict} />
 
       <section className="bg-navy-950 py-20 lg:py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
